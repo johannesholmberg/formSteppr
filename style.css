@@ -1,0 +1,181 @@
+/* ==|== Normalize =================================================================== */
+
+* { -moz-box-sizing: border-box; box-sizing: border-box; }
+body { margin: 0; line-height: 1.231; -webkit-font-smoothing: antialiased; background: url(bg.gif); }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+strong { font-weight: bold; }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; max-width: 100%; }
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+label { cursor: pointer; }
+legend { border: 0; *margin-left: -7px; padding: 0; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input { line-height: normal; *overflow: visible; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -webkit-appearance: none; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+::-webkit-input-placeholder { color: #bbb; }
+:-moz-placeholder { color: #bbb; } 
+
+/* ==|== Global ============================================================================ */
+
+.container { 
+	max-width: 840px; 
+	margin: 2.5% auto; 
+	padding: 20px 10px; 
+}
+
+.container.thanks  {
+	margin: 10% auto;
+}
+
+body, button, input, select, textarea { 
+	font-family: 'Helvetica Neue', sans-serif; 
+	color: #5e5e5e; 
+	font-size: 1.125em;
+}
+
+a { 
+	color: #4695c7; 
+	text-decoration: none; 
+}
+
+a:hover { 
+	color: #025b8e; 
+}
+
+h1 {
+	font-family: 'Helvetica Neue', sans-serif;
+	text-transform: none;
+	font-size: 3em;
+	color: #ccc;
+	margin: 0 0 .6em; 
+	letter-spacing: -0.02em;
+	position: relative;
+}
+
+h1 span {
+	color: #46bee0;
+}
+
+h1:after {
+	content: attr(data-content);
+	display: block;
+	z-index: -1;
+	position: absolute;
+	top: 3px;
+	left: 0;
+	width: 100%;
+	color: #ccc;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+.thanks h1 {
+	color: #666;
+	font-size: 1.4em;
+	font-family: 'Helvetica Neue', sans-serif;
+	letter-spacing: 0;
+	text-align: center;
+	text-transform: none;
+	margin-bottom: 40px;
+}
+
+p {
+	margin-left: 10px;
+}
+
+.thanks p {
+	margin-left: 0;
+	text-align: center;
+}
+
+form { 
+	padding: 15px 10px; 
+	border-radius: 20px; 
+	background: #fff; 
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+fieldset { 
+	background: #f7f7f7;  
+	padding: 20px 12px; 
+	border-radius: 20px;
+	border: 1px solid #eee;
+	margin-bottom: 30px; 
+}
+
+.js fieldset {
+	display: none;
+}
+
+legend { 
+	font-size: 1.2em; 
+}
+
+label {
+	margin: 0 0 0 5px;
+}
+
+input[type="text"],
+input[type="tel"], 
+input[type="email"], 
+input[type="password"], 
+textarea { 
+	width: 100%;
+	display: block; 
+	margin: 10px 0; 
+	padding: 13px 15px; 
+	border: 1px solid #eee;;
+	border-radius: 5px; 
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+}
+
+textarea {
+	height: 160px;
+	font-size: 0.9em;
+	line-height: 1.5;
+}
+
+input[type="submit"],
+button {
+	position: relative;
+	background: #eee;
+	background: linear-gradient(top, #fefefe, #eee);
+	color: #777;
+	border: 1px solid #ddd;
+	padding: 10px 25px 11px;
+	border-radius: 25px;
+	box-shadow: inset 0 -1px 0px #fff;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+input[type="submit"]:active,
+button:active {
+	top: 1px;
+}
+
+@media (min-width: 480px) {
+	
+	.container {
+		padding: 10px 40px; 
+	}
+
+	form {
+		padding: 20px;
+	}
+	
+	fieldset {
+		padding: 40px;
+	}
+	
+	h1 {
+		font-size: 3.5em;	
+	}
+
+}

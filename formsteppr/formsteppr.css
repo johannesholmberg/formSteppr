@@ -1,0 +1,96 @@
+/* ==|== FormSteppr ============================================================= */
+
+.formsteppr nav.fs-progress {
+	margin-bottom: 30px;
+}
+
+.formsteppr nav.fs-progress ul li {
+	display: inline;
+}
+
+.formsteppr nav.fs-progress a {
+	background: #fafafa;
+	padding: 7px 14px 8px;
+	border-radius: 20px;
+	margin: 0 8px;
+	color: #ccc;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+	cursor: default;
+	transition: all 0.2s ease-in-out;
+}
+
+.formsteppr nav.fs-progress a.active {
+	color: #007cc3 !important;
+	background: #fff !important;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+}
+
+.formsteppr nav.fs-progress a.through {
+	color: #204a28;
+	background: #d0d9b4;
+	cursor: pointer;
+}
+
+.formsteppr nav.fs-progress a.through:hover {
+	background: #c2cf99;
+	box-shadow: 0 0 10px rgba(32, 101, 45, 0.2);
+}
+
+.formsteppr fieldset {
+	margin-bottom: 0;
+	border: none;
+}
+
+.formsteppr .fs-required-text {
+	float: right;
+	color: gray;
+	font-size: .6em;
+}
+
+.formsteppr .fs-input-wrap {
+	margin-bottom: 25px;
+}
+
+.formsteppr label .fs-field-required {
+	color: #ab3d3d;
+	margin-left: 3px;
+}
+
+.formsteppr .fs-error-message {
+	color: #c23939;
+	margin-bottom: 5px;
+	font-size: 0.9em;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+.formsteppr .fs-valid {
+	background: #edf3e0;
+	border: 1px solid #c7d4a7;
+}
+
+.formsteppr .fs-invalid {
+	background: #f8e9e9;
+	border: 1px solid #d4a7a7;
+}
+
+.formsteppr .fs-buttons {
+	margin: 2em 0;
+}
+
+.formsteppr .button.back {
+	float: left;	
+}
+
+.formsteppr .button.proceed,
+.formsteppr .fs-submit-button {
+	float: right;	
+}
+
+.formsteppr .s-hidden {
+	display: none;
+}
+
+.formsteppr .s-display {
+	display: block;
+}
