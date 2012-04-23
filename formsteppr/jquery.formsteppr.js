@@ -1,4 +1,4 @@
-// FormSteppr, a jQuery plugin that divides a form into steps using the forms fieldsets.
+// formSteppr, a jQuery plugin that divides a form into steps using the forms fieldsets.
 // by Johannes Holmberg
 // http://jholmberg.com
 // Version 0.5

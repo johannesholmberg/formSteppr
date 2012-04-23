@@ -1,13 +1,9 @@
-/* ==|== Normalize =================================================================== */
-
-* { -moz-box-sizing: border-box; box-sizing: border-box; }
-body { margin: 0; line-height: 1.231; -webkit-font-smoothing: antialiased; background: url(bg.gif); }
+* { box-sizing: border-box; }
+body { margin: 0; line-height: 1.231; -webkit-font-smoothing: antialiased; background: url(images/bg.jpg); }
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
 html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-strong { font-weight: bold; }
 ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
-img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; max-width: 100%; }
 form { margin: 0; }
 fieldset { border: 0; margin: 0; padding: 0; }
 label { cursor: pointer; }
@@ -15,7 +11,6 @@ legend { border: 0; *margin-left: -7px; padding: 0; }
 button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
 button, input { line-height: normal; *overflow: visible; }
 button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
-input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
 input[type="search"] { -webkit-appearance: none; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
 input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
 button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
@@ -23,15 +18,13 @@ textarea { overflow: auto; vertical-align: top; resize: vertical; }
 ::-webkit-input-placeholder { color: #bbb; }
 :-moz-placeholder { color: #bbb; } 
 
-/* ==|== Global ============================================================================ */
-
 .container { 
 	max-width: 840px; 
-	margin: 2.5% auto; 
+	margin: 2% auto; 
 	padding: 20px 10px; 
 }
 
-.container.thanks  {
+.container.submit  {
 	margin: 10% auto;
 }
 
@@ -42,72 +35,51 @@ body, button, input, select, textarea {
 }
 
 a { 
-	color: #4695c7; 
+	color: #29cae6; 
 	text-decoration: none; 
-}
-
-a:hover { 
-	color: #025b8e; 
 }
 
 h1 {
 	font-family: 'Helvetica Neue', sans-serif;
-	text-transform: none;
-	font-size: 3em;
-	color: #ccc;
+	font-size: 2.6em;
+	color: #eee;
 	margin: 0 0 .6em; 
 	letter-spacing: -0.02em;
-	position: relative;
+	text-shadow: 0 2px 1px rgba(0, 0, 0, .8);
+	display: inline-block;	
 }
 
 h1 span {
-	color: #46bee0;
+	color: #29cae6;
+	display: inline-block;
+	transition: all 0.3s ease-in-out;
 }
 
-h1:after {
-	content: attr(data-content);
-	display: block;
-	z-index: -1;
-	position: absolute;
-	top: 3px;
-	left: 0;
-	width: 100%;
-	color: #ccc;
-	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9);
+h1:hover span span {
+	transform: translateX(20px);
 }
 
-.thanks h1 {
-	color: #666;
-	font-size: 1.4em;
-	font-family: 'Helvetica Neue', sans-serif;
-	letter-spacing: 0;
-	text-align: center;
-	text-transform: none;
-	margin-bottom: 40px;
+h2 {
+	color: #fefefe;
 }
 
 p {
-	margin-left: 10px;
-}
-
-.thanks p {
-	margin-left: 0;
-	text-align: center;
+	color: #999;
+	line-height: 1.5;
 }
 
 form { 
 	padding: 15px 10px; 
-	border-radius: 20px; 
-	background: #fff; 
-	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+	border-radius: 5px; 
+	background: url(images/bg-tree.jpg); 
 }
 
 fieldset { 
 	background: #f7f7f7;  
 	padding: 20px 12px; 
-	border-radius: 20px;
-	border: 1px solid #eee;
+	border-radius: 5px;
 	margin-bottom: 30px; 
+	box-shadow: 0 0px 10px rgba(0, 0, 0, .6);
 }
 
 .js fieldset {
@@ -115,11 +87,15 @@ fieldset {
 }
 
 legend { 
-	font-size: 1.2em; 
+	font-size: 1.4em;
+	color: #666;
+	background: rgba(255, 255, 255, .4);
+	padding: 10px;
+	border-radius: 5px; 
 }
 
 label {
-	margin: 0 0 0 5px;
+	padding: 2px 5px;
 }
 
 input[type="text"],
@@ -131,7 +107,7 @@ textarea {
 	display: block; 
 	margin: 10px 0; 
 	padding: 13px 15px; 
-	border: 1px solid #eee;;
+	border: 1px solid #dfdfdf;
 	border-radius: 5px; 
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
 }
@@ -150,8 +126,8 @@ button {
 	color: #777;
 	border: 1px solid #ddd;
 	padding: 10px 25px 11px;
-	border-radius: 25px;
-	box-shadow: inset 0 -1px 0px #fff;
+	border-radius: 5px;
+	box-shadow: 0 3px 0px rgba(0, 0, 0, .1), inset 0 -1px 0px #fff;
 	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
 }
 
@@ -160,14 +136,29 @@ button:active {
 	top: 1px;
 }
 
+h2,
+.submit p {
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .6);
+}
+
+p.footer {
+	float: left;
+}
+
+.twitter-share-button {
+	float: right;
+	margin-top: 20px;
+}
+
 @media (min-width: 480px) {
 	
 	.container {
-		padding: 10px 40px; 
+		padding: 10px 40px 100px; 
 	}
 
 	form {
-		padding: 20px;
+		padding: 40px;
 	}
 	
 	fieldset {
@@ -175,7 +166,7 @@ button:active {
 	}
 	
 	h1 {
-		font-size: 3.5em;	
+		font-size: 3.4em;	
 	}
 
 }
